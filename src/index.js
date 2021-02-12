@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const Menu = ({imgTesla, nameTesla, imgMicrosoft, nameMicrosoft, imgAmazon, nameAmazon}) => (
+    <ul>
+        <li>
+           <img src={imgTesla}/>
+<p>{nameTesla}</p>
+        </li>
+        <li>
+           <img src={imgMicrosoft}/>
+<p>{nameMicrosoft}</p>
+        </li>
+        <li>
+           <img src={imgAmazon}/>
+<p>{nameAmazon}</p>
+        </li>
+    </ul>
 );
+ReactDOM.render(
+  <Menu
+  imgTesla='./tesla.jpg'
+  nameTesla='Илон Маск'
+  imgMicrosoft='./microsoft .jpg'
+  nameMicrosoft='Билл Гейтс'
+  imgAmazon='./amazon.jpeg'
+  nameAmazon='Джефф Безос'
+  />,
+  document.getElementById('root')   
+    );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Домашнє завдання!!!!!!!!!
+//Створити компонент меню з елементами та передавати в середину всі пункти меню через props
